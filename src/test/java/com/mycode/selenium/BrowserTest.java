@@ -16,6 +16,34 @@ public class BrowserTest {
 		driver.quit();
 	}
 	
+	@Test
+	public void test1() {
+		WebDriver driver = Browsers.launch(BrowserType.firefox, "resources/selenium/drivers/firefox/0.19.1/macos/geckodriver");
+		driver.get("http://www.baidu.com");
+		driver.findElement(By.partialLinkText("百度"));
+		Assert.assertTrue(driver.getPageSource().contains("百度"));
+		driver.quit();
+	}
+	
+	@Test
+	public void test2() {
+		WebDriver driver = Browsers.launch(BrowserType.firefox, "resources/selenium/drivers/firefox/0.19.1/macos/geckodriver");
+		driver.get("http://www.baidu.com");
+		driver.findElement(By.partialLinkText("百度"));
+		Assert.assertTrue(driver.getPageSource().contains("百度"));
+		driver.quit();
+	}
+	
+	
+	@Test
+	public void test3() {
+		WebDriver driver = Browsers.launch(BrowserType.firefox, "resources/selenium/drivers/firefox/0.19.1/macos/geckodriver");
+		driver.get("http://www.baidu.com");
+		driver.findElement(By.partialLinkText("百度"));
+		Assert.assertTrue(driver.getPageSource().contains("等等等等等"));
+		driver.quit();
+	}
+	
 //	@Test
 //	public void test1() {
 //		WebDriver driver = Browsers.launch(BrowserType.firefox, "resources/selenium/drivers/firefox/0.19.1/macos/geckodriver");
